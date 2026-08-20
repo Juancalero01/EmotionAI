@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Outer Rounded Squircle Container -->
+  <rect width="64" height="64" rx="18" fill="#0F172A" />
+  <rect x="2" y="2" width="60" height="60" rx="16" stroke="url(#accent-grad)" stroke-width="2.5" stroke-opacity="0.8" />
+
+  <!-- Emotion Face Contour -->
+  <circle cx="32" cy="32" r="20" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="round" />
+
+  <!-- Left Eye: Inquisitive Dot -->
+  <circle cx="25" cy="27" r="2.5" fill="#38BDF8" />
+
+  <!-- Right Eye: Curious Arch / Question Eyebrow Motif -->
+  <path d="M 37 23 C 40 23, 41 25, 39 27 C 37.5 28.5, 37.5 29.5, 37.5 31" stroke="#F43F5E" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <circle cx="37.5" cy="34" r="1.2" fill="#F43F5E" />
+
+  <!-- Subtle Inquisitive Smile Curve -->
+  <path d="M 24 37 C 28 41, 34 40, 38 37" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Accent Gradient Definition -->
+  <defs>
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" />
+      <stop offset="0.5" stop-color="#818CF8" />
+      <stop offset="1" stop-color="#F43F5E" />
+    </linearGradient>
+  </defs>
+</svg>
