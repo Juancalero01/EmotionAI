@@ -1,4 +1,8 @@
-# 🎙️ EmotionAI - Real-Time Conversational Emotional Intelligence & Copilot
+# EmotionAI - Real-Time Conversational Emotional Intelligence & Copilot
+
+<p align="center">
+  <img src="./docs/images/emotionai_header.svg" alt="EmotionAI Banner" width="100%" />
+</p>
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB.svg?style=flat&logo=react)](https://reactjs.org/)
@@ -10,23 +14,23 @@
 
 ---
 
-## 📌 Problemática
+## Problemática
 
 En los **contact centers y centros de atención al cliente actuales**, los operadores enfrentan escenarios de alta tensión y llamadas conflictivas sin contar con visibilidad en tiempo real sobre el estado emocional del cliente. 
 
 ### Principales Desafíos:
-* ⚠️ **Atención Reactiva**: La falta de detección temprana provoca que las conversaciones escalen a conflicto antes de que el operador pueda aplicar contención psicológica.
-* ⏱️ **Tiempos de Operación Elevados**: Búsqueda manual de manuales, políticas de reembolso y fichas de clientes mientras se atiende la llamada.
-* 📉 **Alta Tasa de Churn**: Clientes insatisfechos por reclamos no resueltos o falta de empatía táctica durante la comunicación.
-* 📝 **Carga Manual Post-Llamada**: Elaboración lenta de reportes de llamada, lo que reduce la disponibilidad del personal de soporte.
+* **Atención Reactiva**: La falta de detección temprana provoca que las conversaciones escalen a conflicto antes de que el operador pueda aplicar contención psicológica.
+* **Tiempos de Operación Elevados**: Búsqueda manual de manuales, políticas de reembolso y fichas de clientes mientras se atiende la llamada.
+* **Alta Tasa de Churn**: Clientes insatisfechos por reclamos no resueltos o falta de empatía táctica durante la comunicación.
+* **Carga Manual Post-Llamada**: Elaboración lenta de reportes de llamada, lo que reduce la disponibilidad del personal de soporte.
 
 ---
 
-## 🚀 Solución: EmotionAI Copilot
+## Solución: EmotionAI Copilot
 
 **EmotionAI** es una plataforma integral de inteligencia conversacional que procesa el flujo de voz en vivo en ventanas de **1.2 segundos**, analiza la trayectoria emocional del cliente mediante modelos de lenguaje avanzadas (**Groq Llama 8B / 70B & Whisper STT**), asiste al operador en tiempo real con un **Copiloto IA** y genera reportes ejecutivos automáticos almacenados en **MongoDB Atlas**.
 
-### ✨ Características Principales:
+### Características Principales:
 1. **Detección Emocional Canónica**: Clasificación en vivo en 4 grupos emocionales (*Frustración, Ansiedad, Satisfacción, Neutralidad*) con cálculo de intensidad (0.0 a 1.0) y nivel de urgencia.
 2. **Filtro Semántico (Gatekeeper)**: Inteligencia que descarta saludos, muletillas y frases cortas sin contenido emocional para optimizar las llamadas a la API de IA.
 3. **Copiloto IA en Tiempo Real**: Sugerencias tácticas de desescalación y respuestas basadas en políticas corporativas.
@@ -35,39 +39,7 @@ En los **contact centers y centros de atención al cliente actuales**, los opera
 
 ---
 
-## 🖼️ Capturas de Pantalla y Demostración
-
-Below are visual previews of the **EmotionAI** platform interface:
-
-### 1. Pantalla de Bienvenida y Presentación Interactiva
-> *Simulación interactiva de los 4 estados emocionales canónicos.*
-
-![Welcome Presentation Screen](./docs/screenshots/welcome_screen.png)
-
----
-
-### 2. Panel de Llamada en Vivo & Telemetría Emocional
-> *Monitoreo en tiempo real, transcripción diarizada y recomendaciones tácticas de IA.*
-
-![Active Call Telemetry Dashboard](./docs/screenshots/active_call_dashboard.png)
-
----
-
-### 3. Copiloto IA y Ficha de Cliente
-> *Asistente conversacional en vivo para consultas de políticas y consulta de perfiles en MongoDB Atlas.*
-
-![Copilot AI & Customer Profile](./docs/screenshots/copilot_profile.png)
-
----
-
-### 4. Resumen Ejecutivo Post-Llamada y Analítica
-> *Métricas de sesión, reproductor de audio grabado y persistencia confirmada.*
-
-![Post-Call Executive Analytics](./docs/screenshots/call_summary.png)
-
----
-
-## 🛠️ Arquitectura Tecnológica
+## Arquitectura Tecnológica
 
 ```mermaid
 graph TD
@@ -86,7 +58,7 @@ graph TD
 
 ---
 
-## ⚡ Instalación y Despliegue Rápido con Docker
+## Instalación y Despliegue Rápido con Docker
 
 ### Prerrequisitos:
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y en ejecución.
@@ -135,6 +107,6 @@ graph TD
 
 ---
 
-## 📜 Licencia y Reconocimientos
+## Licencia y Reconocimientos
 
 Desarrollado por **Juan Calero**.

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 100" width="100%">
+  <defs>
+    <!-- Vibrant Blue-Indigo Gradient for EmotionAI Title (High contrast on both light & dark themes) -->
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+  </defs>
+
+  <!-- 4 Canonical Emotion Line-Art Face Icons (Left Side, Transparent Background) -->
+  <g transform="translate(0, 20)">
+    <!-- 1. FRUSTRACIÓN (Rose) -->
+    <g transform="translate(0, 0)" stroke="#F43F5E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="30" cy="30" r="26" stroke-width="3.5" />
+      <line x1="15" y1="18" x2="25" y2="22" stroke-width="3" />
+      <line x1="45" y1="18" x2="35" y2="22" stroke-width="3" />
+      <circle cx="21" cy="27" r="3" fill="#F43F5E" stroke="none" />
+      <circle cx="39" cy="27" r="3" fill="#F43F5E" stroke="none" />
+      <path d="M 17,42 Q 30,32 43,42" stroke-width="3.5" />
+    </g>
+
+    <!-- 2. ANSIEDAD (Amber) -->
+    <g transform="translate(68, 0)" stroke="#F59E0B" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="30" cy="30" r="26" stroke-width="3.5" />
+      <line x1="16" y1="21" x2="25" y2="17" stroke-width="2.5" />
+      <line x1="44" y1="21" x2="35" y2="17" stroke-width="2.5" />
+      <circle cx="21" cy="27" r="3" fill="#F59E0B" stroke="none" />
+      <circle cx="39" cy="27" r="3" fill="#F59E0B" stroke="none" />
+      <path d="M 17,37 Q 23,32 30,37 T 43,37" stroke-width="3.5" />
+    </g>
+
+    <!-- 3. SATISFACCIÓN (Emerald) -->
+    <g transform="translate(136, 0)" stroke="#10B981" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="30" cy="30" r="26" stroke-width="3.5" />
+      <circle cx="21" cy="24" r="3" fill="#10B981" stroke="none" />
+      <circle cx="39" cy="24" r="3" fill="#10B981" stroke="none" />
+      <path d="M 17,35 Q 30,48 43,35" stroke-width="3.5" />
+    </g>
+
+    <!-- 4. NEUTRAL (Blue) -->
+    <g transform="translate(204, 0)" stroke="#3B82F6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="30" cy="30" r="26" stroke-width="3.5" />
+      <circle cx="21" cy="24" r="3" fill="#3B82F6" stroke="none" />
+      <circle cx="39" cy="24" r="3" fill="#3B82F6" stroke="none" />
+      <line x1="18" y1="37" x2="42" y2="37" stroke-width="3.5" />
+    </g>
+  </g>
+
+  <!-- EmotionAI Title (Right Side, Large Bold Gradient Text for Light & Dark Themes) -->
+  <text x="285" y="68" fill="url(#titleGradient)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="900" letter-spacing="-0.5">EmotionAI</text>
+</svg>
