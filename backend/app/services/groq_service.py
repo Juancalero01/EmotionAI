@@ -134,7 +134,7 @@ class GroqService:
                 context_str += f"{role_label}: {msg.get('text')}\n"
 
             system_prompt = (
-                "Eres el Copiloto de IA de Emociones, un asistente avanzado en tiempo real para operadores de atención al cliente y ventas.\n"
+                "Eres el Copiloto de IA de EmotionAI, un asistente avanzado en tiempo real para operadores de atención al cliente y ventas.\n"
                 "Conoces el historial completo de la conversación en ESPAÑOL. Tu objetivo es sugerir respuestas recomendadas, "
                 "técnicas de desescalación psicológica o estrategias de resolución basadas en la llamada en vivo DIRECTAMENTE EN ESPAÑOL.\n"
                 "Reglas críticas:\n"

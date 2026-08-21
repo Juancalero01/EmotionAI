@@ -68,8 +68,8 @@ graph TD
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/emociones.git
-   cd emociones
+   git clone https://github.com/tu-usuario/EmotionAI.git
+   cd EmotionAI
    ```
 
 2. **Configurar Variables de Entorno en Backend**:
