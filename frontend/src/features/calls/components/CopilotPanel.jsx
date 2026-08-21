@@ -2,6 +2,36 @@ import { Fragment, useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 import { useCall } from "../../../contexts/CallContext";
 
+const parseInlineMarkdown = (text) => {
+  if (!text) return "";
+  const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
+
+  return parts.map((part, idx) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={idx} className="font-bold text-slate-900">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith("*") && part.endsWith("*")) {
+      return (
+        <em key={idx} className="italic text-slate-800">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return (
+        <code key={idx} className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[11px] text-slate-900 border border-slate-200/80">
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    return part;
+  });
+};
+
 // Helper component to render Markdown formatted responses cleanly
 const FormattedMarkdown = ({ content }) => {
   if (!content) return null;
@@ -47,36 +77,6 @@ const FormattedMarkdown = ({ content }) => {
       })}
     </div>
   );
-};
-
-const parseInlineMarkdown = (text) => {
-  if (!text) return "";
-  const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
-
-  return parts.map((part, idx) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={idx} className="font-bold text-slate-900">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    if (part.startsWith("*") && part.endsWith("*")) {
-      return (
-        <em key={idx} className="italic text-slate-800">
-          {part.slice(1, -1)}
-        </em>
-      );
-    }
-    if (part.startsWith("`") && part.endsWith("`")) {
-      return (
-        <code key={idx} className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[11px] text-slate-900 border border-slate-200/80">
-          {part.slice(1, -1)}
-        </code>
-      );
-    }
-    return part;
-  });
 };
 
 export const CopilotPanel = ({

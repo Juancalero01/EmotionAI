@@ -10,7 +10,7 @@ logger = logging.getLogger("app.services.groq_service")
 class GroqService:
     """
     Asynchronous AI Service integration wrapping Groq SDK models.
-    Executes fast Llama 8B emotion analysis, Llama 70B Copilot recommendations,
+    Executes fast openai/gpt-oss-20b emotion analysis, openai/gpt-oss-120b Copilot recommendations,
     NER customer profile extraction, executive post-call summaries, and Whisper STT transcriptions.
     """
     def __init__(self):
@@ -56,7 +56,7 @@ class GroqService:
 
     async def analyze_emotion(self, text: str) -> Dict[str, Any]:
         """
-        Analyzes a fast text snippet using Llama 8B
+        Analyzes a fast text snippet using openai/gpt-oss-20b
         and returns the emotional state classified into 4 canonical English groups with intensity and Spanish recommendations in JSON.
         """
         if not self.is_semantically_relevant(text):

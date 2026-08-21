@@ -266,7 +266,8 @@ class DBService:
         messages: List[Dict[str, Any]],
         emotion_records: List[Dict[str, Any]],
         summary_analytics: Dict[str, Any] = None,
-        talk_ratio: Dict[str, int] = None
+        talk_ratio: Dict[str, int] = None,
+        audio_url: str = None
     ) -> bool:
         """
         Persists confirmed session header to 'call_sessions' and updates customer call counter in MongoDB Atlas.
@@ -285,7 +286,7 @@ class DBService:
                 "status": "completed",
                 "talk_ratio": talk_ratio or {"customer": 65, "operator": 35},
                 "summary_analytics": summary_analytics or {},
-                "audio_url": f"/recordings/call_{call_id}.webm"
+                "audio_url": audio_url or f"/recordings/call_{call_id}.webm"
             }
             
             # Insert session header document into 'call_sessions'

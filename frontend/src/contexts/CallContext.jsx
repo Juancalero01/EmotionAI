@@ -110,7 +110,7 @@ export const CallProvider = ({ children }) => {
       const formData = new FormData();
       formData.append("file", audioBlob, `recording_${targetCallId}.webm`);
 
-      const res = await fetch(`${config.API_URL}/recording/${targetCallId}`, {
+      const res = await fetch(`${config.API_URL}/sessions/${targetCallId}/recording`, {
         method: "POST",
         body: formData,
       });
@@ -171,7 +171,6 @@ export const CallProvider = ({ children }) => {
       motivo: null,
     });
     setHistoricalProfile(null);
-    setIsSearchingProfile(false);
 
     const socketUrl = `${config.WS_URL}/${callId}`;
 
@@ -333,7 +332,6 @@ export const CallProvider = ({ children }) => {
             break;
 
           case "profile_search_result":
-            setIsSearchingProfile(false);
             if (message.historical_profile) {
               setHistoricalProfile(message.historical_profile);
             } else {

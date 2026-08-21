@@ -213,6 +213,8 @@ async def save_confirmed_session(call_id: str, payload: Dict[str, Any]):
     op_pct = 100 - cust_pct if total_msgs > 0 else 35
     talk_ratio = {"customer": cust_pct, "operator": op_pct}
 
+    audio_url = payload.get("audio_url")
+
     # Persist session to MongoDB Atlas 'call_sessions'
     success = await db_service.save_call_session(
         session_id=session_id,
@@ -221,7 +223,8 @@ async def save_confirmed_session(call_id: str, payload: Dict[str, Any]):
         messages=messages,
         emotion_records=emotion_records,
         summary_analytics=summary_data,
-        talk_ratio=talk_ratio
+        talk_ratio=talk_ratio,
+        audio_url=audio_url
     )
 
     if not success:

@@ -22,6 +22,7 @@ export const CallSummaryView = ({
     uploadAudioRecording,
     transcript = [],
     emotionHistory = [],
+    copilotSuggestions = [],
     extractedProfile = {},
   } = useCall();
 
@@ -187,7 +188,7 @@ export const CallSummaryView = ({
             messages: transcript,
             emotion_records: emotionHistory,
             summary_analytics: aiSummary,
-            audio_url: serverAudioUrl || propRecordingUrl || context?.recordingUrl
+            audio_url: serverAudioUrl || recordingUrl
           }),
         }
       );

@@ -29,8 +29,8 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str = Field("gsk_your_groq_api_key_here", validation_alias="GROQ_API_KEY")
     
     # Groq Model Specs
-    EMOTION_MODEL: str = Field("llama-3.1-8b-instant", validation_alias="EMOTION_MODEL")
-    COPILOT_MODEL: str = Field("llama-3.3-70b-versatile", validation_alias="COPILOT_MODEL")
+    EMOTION_MODEL: str = Field("openai/gpt-oss-20b", validation_alias="EMOTION_MODEL")
+    COPILOT_MODEL: str = Field("openai/gpt-oss-120b", validation_alias="COPILOT_MODEL")
     WHISPER_MODEL: str = Field("whisper-large-v3", validation_alias="WHISPER_MODEL")
 
     # Storage Paths

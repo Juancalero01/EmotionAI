@@ -20,6 +20,7 @@ export const EmotionWidget = ({
     (context?.transcript && context.transcript.length > 0
       ? context.transcript
       : []);
+  const extractedProfile = propProfile || context?.extractedProfile || {};
 
   // Safe property resolution supporting both Spanish and English schemas
   const rawDetected =
